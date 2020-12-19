@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <title>Scrap Your Gear Documentation</title>
+
+    <style>
+        #topBtn {
+            display: none;
+            position: fixed;
+            bottom: 5%;
+            right: 2.5%;
+            z-index: 99;
+            color: white;
+            background-color: #777777;
+            padding: 15px;
+            font-size: 18px;
+            font-family: 'Open Sans', sans-serif;
+            font-weight:700;
+            border:none;
+            outline:none;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+        }
+
+        #topBtn:hover{
+            background-color: #999999;
+        }
+
+        a {
+            color: #555555;
+        }
+    </style>
+
+</head>
+
+<body>
+    <button onclick="gotoTop()" id="topBtn" title="Go to top">^</button>
+    <div style="display: flex; background-color: #FF154A; color: white">
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:400; margin-left: 2rem;">
+            Warning: This documentation is meant for the legacy version of Scrap Your Gear.
+        </p>
+    </div>
+    <div style="margin-left: 2rem;">
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:700; font-size: 32px">Scrap Your Gear</p>
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">
+            Scrap Your Gear is a Minecraft plugin that handles the garbage loot from farming.
+            <br>The plugin was created and is currently handled by <a href="https://www.facebook.com/gtoidz" target="_blank">GlitchToidZ</a> a.k.a. GToidZ.
+        </p>
+    </div>
+    <div style="margin-left: 4rem;">
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:700; font-size: 24px">Documentation</p>
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">This is meant for server owners or moderators, if you don't know what something means.<br>Do consult basics on editing configuration files for plugins via practice.</p>
+        <div style="border: 1px solid #777777; font-family: 'Open Sans', sans-serif; font-weight:400; width: 10%; padding: 1rem; margin-left: 2rem; margin-top: 2rem;">
+            <a href="#commands">Commands</a>
+            <br>
+            <a href="#permissions">Permissions</a>
+            <br>
+            <a href="#configuration">Configuration</a>
+            <br>
+            <a style="margin-left: 2rem;" href="#config">1. config.yml</a>
+            <br>
+            <a style="margin-left: 4rem;" href="#formula">Formulas</a>
+            <br>
+            <a style="margin-left: 2rem;" href="#potentials">2. potentials.yml</a>
+            <br>
+            <a style="margin-left: 2rem;" href="#messages">3. messages.yml</a>
+            <br>
+            <a href="#changelog">Changelog</a>
+            <br>
+            <a href="#credits">Credits</a>
+        </div>
+    </div>
+
+    <div style="margin-left: 4rem; margin-right: 50%;" id="commands">
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:700; font-size: 24px">Commands</p>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">"/scrap" or "/syg"</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Main command, used for showing help message.</p>
+        </div>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">/scrap money</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Open GUI for selling via command.</p>
+        </div>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">/scrap exp</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Open GUI for scraping via command.</p>
+        </div>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">/scrap reload</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;"><b>Admin Command</b><br>Reload all configuration files in plugin.</p>
+        </div>
+    </div>
+
+    <div style="margin-left: 4rem; margin-right: 50%;" id="permissions">
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:700; font-size: 24px">Permissions</p>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">syg.command.money</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Allows player to open GUI for selling via command.</p>
+        </div>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">syg.command.exp</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Allows player to open GUI for scraping via command.</p>
+        </div>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">syg.bypass</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Allows player to use Scrap Your Gear in creative mode.</p>
+        </div>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">syg.admin</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Allows player to access admin commands.</p>
+        </div>
+    </div>
+
+    <div style="margin-left: 4rem; margin-right: 50%;" id="configuration">
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:700; font-size: 24px">Configuration</p>
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">This section is about the files in the data folder. All server owners and moderators should read this section.</p>
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:700; font-size: 24px" id="config">config.yml</p>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">debug: Boolean</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">This option is to be enabled if you wanted to understand what's behind the process.</p>
+        </div>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">blocks.sell-block: String</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Set the block for selling when player's interacted with.<br><i>**Use Minecraft namespaced key!</i></p>
+        </div>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">blocks.exp-block: String</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Set the block for scraping when player's interacted with.<br><i>**Use Minecraft namespaced key!</i></p>
+        </div>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">gui.sell-gui.decorations: String<br>gui.sell-gui.info: String<br>gui.sell-gui.button: String</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Set the items for selling GUI.<br><i>**Use Minecraft namespaced key!</i></p>
+        </div>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">gui.exp-gui.decorations: String<br>gui.exp-gui.info: String<br>gui.exp-gui.button: String</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Set the items for scraping GUI.<br><i>**Use Minecraft namespaced key!</i></p>
+        </div>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">gui.exp-gui.bottle-enable: String<br>gui.exp-gui.bottle-disable: String</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Set the items for toggling reward as EXP and XP Bottles.<br><i>**Use Minecraft namespaced key!</i></p>
+        </div>
+
+        <div style="margin-left: 2rem;" id="formula">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700; font-size: 24px">Formulas</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Formulas in configuration are parsed with a library "exp4j," a Java library for evaluating mathematical expressions up to scientific functions. Please consult the variables by reference below. You might also want to reference the expression format from the official 
+                <a href="https://www.objecthunter.net/exp4j/">exp4j documentation</a>.</p>
+            <div style="border-bottom: 1px solid #999999;">
+                <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">material-formula: String</p>
+                <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Will evaluate the value via material of the item.<br> &lt;var1&gt; : value of material from potentials.yml</p>
+            </div>
+            <div style="border-bottom: 1px solid #999999;">
+                <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">durability-formula: String</p>
+                <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Will evaluate the value via durability of the item.<br> &lt;var1&gt; : value of percentage durabilty from potentials.yml</p>
+            </div>
+            <div style="border-bottom: 1px solid #999999;">
+                <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">enchantment-formula: String</p>
+                <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Will evaluate the value via each enchantments of the item.<br>&lt;var1&gt; : value of a single enchantment from potentials.yml<br>&lt;var2&gt; : level of that enchantment.</p>
+            </div>
+            <div style="border-bottom: 1px solid #999999;">
+                <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">total-formula: String</p>
+                <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Will evaluate the final reward from using Scrap Your Gear.
+                    <br>&lt;var1&gt; : value from material evaluation.
+                    <br>&lt;var2&gt; : value from durability evaluation.
+                    <br>&lt;var3&gt; : value from all enchantment evaluations summed up.
+                </p>
+            </div>
+            <div style="border-bottom: 1px solid #999999;">
+                <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">bottle-divisor: Integer</p>
+                <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">When "Prefer Bottles" is enabled, this value will divide the Total Formula of EXP procedure.
+                    <br><i>**Only available in Scraping procedure.</i>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div style="margin-left: 4rem; margin-right: 50%;" id="potentials">
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:700; font-size: 24px">potentials.yml</p>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">material.[smth]: Double</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Determine each material with different values.</p>
+        </div>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">durabilities.[smth]: Double</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Determine each durability ranges with different values.</p>
+        </div>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">enchantment.[smth].[money/exp]: Double</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Determine each enchantment with different values.<br>
+            Money and EXP are seperated as individual values.<br>(Optional) Adding "negative: true" option makes the enchantment lower the final reward.</p>
+        </div>
+    </div>
+
+    <div style="margin-left: 4rem; margin-right: 50%;" id="messages">
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:700; font-size: 24px">messages.yml</p>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">chat.[message]: String</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Self-explanatory, messages are formatted by "prefix" followed by the message queried.</p>
+        </div>
+        <div style="margin-left:2rem; border-bottom: 1px solid #999999;">
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:700;">gui.title: String</p>
+            <p style="font-family: 'Open Sans', sans-serif; font-weight:400;">Title for Scrap Your Gear GUI.</p>
+        </div>
+    </div>
+
+    <div style="margin-left: 4rem; margin-right: 50%;" id="changelog">
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:700; font-size: 24px">Changelog</p>
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:400; margin-left: 2rem;">
+            <b>1.1.3</b> @ 10/4/20<br>
+            + Added more sounds to interaction.<br>
+            + Added display message when no items are scraped.<br>
+            # Revised some logic in plugin.<br><br>
+            <b>1.1.2</b> @ 9/4/20<br>
+            + Added messages.yml<br>
+            + Added documentation.yml<br>
+            + Added creative protection and bypass permission node.<br>
+            - Removed hardcoded messages.<br><br>
+            <b>1.1.0</b> @ 8/4/20<br>
+            + Added config.yml<br>
+            + Added exp4j as a dependency, for configurable dynamic formulas.<br>
+            # Changed how the plugin grades items and evaluate rewards.<br>
+            - Removed hardcoded formulas.<br><br>
+            <b>1.0.0</b> @ 1/4/20<br>
+            + Wow, project launch!<br>
+            + Added Vault as dependency.<br>
+            ! Everything is experimental and it sucked.<br><br><br>
+            <i>Developer Notes: This plugin is not final yet! I am thinking of adding some limitation system, for players can abuse the usage of this mechanic.<br>
+            Further development might support more plugins, but I have no plan yet to do supports.<br>
+            Lastly, the plugin itself is still very experimental; there is more room for improvement in the future.<br>
+            <b>The plugin is currently in development of a revised version!</b></i><br>
+        </p>
+    </div>
+
+    <div style="margin-left: 4rem; margin-right: 50%;" id="credits">
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:700; font-size: 24px">Credits (woot!)</p>
+        <p style="font-family: 'Open Sans', sans-serif; font-weight:400; margin-left: 2rem;">
+            I hereby thank you,
+            <div style="margin-left: 2rem;">
+                <p style="font-family: 'Open Sans', sans-serif; font-weight:400; margin-left: 2rem;">
+                    <a href="https://github.com/Sleaker">Nick Minkler</a> (MilkBowl, ftw!) : Creator and developer of Vault, MilkBowl team lead<br>
+                    <a href="https://github.com/mung3r">Rodney Ramos</a> : Developer of Vault<br>
+                    <a href="http://www.objecthunter.net/">ObjectHunter</a> (known as 'frank' in site) : Developer of exp4j<br>
+                    <a href="https://github.com/shuvamc019">Shuvam Chatterjee</a> : Developer of exp4j<br>
+                </p>
+            </div>
+        </p>
+    </div>
+
+    <script>
+        var topBtn = document.getElementById("topBtn");
+        window.onscroll = function() {scrollFn()};
+
+        function scrollFn(){
+            if(document.body.scrollTop > 100 || document.documentElement.scrollTop > 100){
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        }
+
+        function gotoTop(){
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+</body>
+</html>

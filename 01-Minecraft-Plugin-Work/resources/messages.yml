@@ -1,0 +1,18 @@
+chat:
+  prefix: "&3&lSCRAP &f>> "
+
+  reload-message: "&aPlugin configurations successfully reloaded."
+
+  money-reward-message: "&aYou received $&f<money> &ffor selling gear."
+  exp-reward-message: "&aYou received &f<exp> &aEXP scraping gear."
+  bottles-reward-message: "&aYou received &f<number> &aXP Bottles scraping gear."
+  unwanted-items-message: "&eYou received some of the unaccepted items back."
+  nothing-message: "&eYou haven't received anything..."
+
+  permission-error: "&cYou have no permission to use the command."
+  not-a-player-error: "&cCommand can only be executed by players."
+  arguments-error: "&cUnknown argument, please check 'help' command."
+  creative-error: "&cYou may not use Scrap Your Gear in creative."
+
+gui:
+  title: "&1&lScrap Your Gear"

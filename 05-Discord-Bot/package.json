@@ -1,0 +1,18 @@
+{
+  "name": "saucechan",
+  "version": "1.0.0",
+  "description": "A Discord bot that looks up source of images (mostly weeb shit).",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/app.js",
+    "dev": "nodemon ./src/app.js"
+  },
+  "author": "GToidZ",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^12.5.1",
+    "dotenv": "^8.2.0",
+    "node-fetch": "^2.6.1"
+  }
+}

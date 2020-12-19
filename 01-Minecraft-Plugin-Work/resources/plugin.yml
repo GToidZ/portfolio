@@ -1,0 +1,28 @@
+name: ScrapYourGear
+main: me.gtoidz.scrapyourgear.ScrapYourGear
+version: 1.1.3
+description: A plugin for grading and scraping your tools, weapons and armor.
+api-version: 1.15
+authors: [ GToidZ ]
+depend: [ Vault ]
+commands:
+  scrap:
+    description: A command for ScrapYourGear plugin.
+    usage: /<command>
+    aliases: [ syg ]
+permissions:
+  syg.*:
+    default: op
+    description: Grants access to all commands and functions.
+  syg.admin:
+    default: op
+    description: Allows the user to use plugin admin commands.
+  syg.command.money:
+    default: false
+    description: Allows the player to open the GUI via command.
+  syg.command.exp:
+    default: false
+    description: Allows the player to open the GUI via command.
+  syg.bypass:
+    default: false
+    description: Allows the player to use SYG in creative mode.

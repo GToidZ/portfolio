@@ -1,0 +1,126 @@
+material:
+  wood: 0.2
+  leather: 0.2
+  stone: 0.35
+  chain: 0.5
+  gold: 0.75
+  iron: 1.5
+  diamond: 4
+  trident: 2.5
+  crossbow: 1
+  bow: 0.5
+  rod: 0.35
+
+durabilities:
+  best: 4
+  good: 3
+  fine: 2
+  bad: 1
+  broken: 0.5
+
+enchantments:
+  unbreaking:
+    money: 1.25
+    exp: 6
+  efficiency:
+    money: 1.5
+    exp: 8
+  fortune:
+    money: 2.5
+    exp: 15
+  silktouch:
+    money: 5
+    exp: 30
+  protection:
+    money: 1.5
+    exp: 8
+  fireprotection:
+    money: 1.5
+    exp: 8
+  blastprotection:
+    money: 1.5
+    exp: 8
+  projectileprotection:
+    money: 1.5
+    exp: 8
+  thorns:
+    money: 3
+    exp: 18
+  featherfalling:
+    money: 2.5
+    exp: 15
+  respiration:
+    money: 2.5
+    exp: 15
+  aquaaffinity:
+    money: 2
+    exp: 12
+  depthstrider:
+    money: 2
+    exp: 12
+  frostwalker:
+    money: 3
+    exp: 18
+  sharpness:
+    money: 1.5
+    exp: 10
+  smite:
+    money: 1.5
+    exp: 10
+  baneofarthropods:
+    money: 1.5
+    exp: 10
+  knockback:
+    money: 2
+    exp: 12
+  fireaspect:
+    money: 2
+    exp: 12
+  looting:
+    money: 2.5
+    exp: 15
+  sweeping:
+    money: 2
+    exp: 12
+  power:
+    money: 2
+    exp: 12
+  punch:
+    money: 2
+    exp: 12
+  flame:
+    money: 2
+    exp: 12
+  infinity:
+    money: 7
+    exp: 42
+  luckofthesea:
+    money: 3
+    exp: 18
+  lure:
+    money: 2
+    exp: 12
+  loyalty:
+    money: 2
+    exp: 12
+  impaling:
+    money: 2
+    exp: 12
+  riptide:
+    money: 2
+    exp: 12
+  channeling:
+    money: 5
+    exp: 30
+  multishot:
+    money: 3
+    exp: 18
+  quickcharge:
+    money: 2
+    exp: 12
+  piercing:
+    money: 3
+    exp: 18
+  mending:
+    money: 7
+    exp: 42

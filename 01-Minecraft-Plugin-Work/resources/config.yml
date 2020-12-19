@@ -1,0 +1,36 @@
+version: 3
+debug: false #This will spam a lot in console.
+
+blocks:
+  sell-block: "GOLD_BLOCK"
+  exp-block: "EMERALD_BLOCK"
+
+gui:
+  sell-gui:
+    decorations: "YELLOW_STAINED_GLASS_PANE"
+    info: "BOOK"
+    button: "EMERALD"
+  exp-gui:
+    decorations: "LIME_STAINED_GLASS_PANE"
+    info: "BOOK"
+    button: "EXPERIENCE_BOTTLE"
+    bottle-enable: "POTION"
+    bottle-disable: "GLASS_BOTTLE"
+
+#
+# Formulas and expressions are parsed using exp4j.
+# More info regarding exp4j can be found on https://www.objecthunter.net/exp4j/
+# Variables definitions can be found at "documentation.html"
+#
+formulas:
+  sell:
+    material-formula: "<var1>"
+    durability-formula: "<var1>"
+    enchantment-formula: "<var1> * <var2>"
+    total-formula: "((<var1> * <var2>) * 50) + (<var3> * 20)"
+  exp:
+    material-formula: "<var1> + 1"
+    durability-formula: "<var1>"
+    enchantment-formula: "<var1> * <var2>"
+    total-formula: "(ceil(<var1> * <var2>) * 3) + <var3>"
+    bottle-divisor: 6
